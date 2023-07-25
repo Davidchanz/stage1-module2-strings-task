@@ -20,8 +20,6 @@ public class StringSplitter {
         for (var c : source.toCharArray()) {
             var currentDelimiter = getDelimiterStartsWithChar(delimiters, c);
             if(currentDelimiter != null){
-                var t = source.indexOf(c);
-                var r = source.substring(source.indexOf(c), source.indexOf(c) + currentDelimiter.length());
                 if(source.substring(source.indexOf(c), source.indexOf(c) + currentDelimiter.length()).equals(currentDelimiter)){
                     if(!buffer.toString().isBlank())
                         result.add(buffer.toString());
