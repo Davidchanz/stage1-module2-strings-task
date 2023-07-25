@@ -33,8 +33,8 @@ public class MethodParser {
         List<MethodSignature.Argument> argumentList = new ArrayList<>();
         if(args.length != 1 && !args[0].isEmpty()) {
             for (var arg : args) {
-                String[] splitedArg = arg.split(" ");
-                argumentList.add(new MethodSignature.Argument(splitedArg[0], splitedArg[1]));
+                String[] splitArg = arg.split(" ");
+                argumentList.add(new MethodSignature.Argument(splitArg[0], splitArg[1]));
             }
         }
         MethodSignature methodSignature = new MethodSignature(params[params.length-1], argumentList);
